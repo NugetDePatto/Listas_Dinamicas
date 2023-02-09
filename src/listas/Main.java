@@ -1,11 +1,5 @@
 package listas;
 
-import java.util.Scanner;
-
-/**
- *
- * @author anala
- */
 public class Main {
     
     public static void main(String[] args){

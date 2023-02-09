@@ -5,6 +5,7 @@ public class Listas {
 
     Nodo raiz;
 
+    //como el nombre lo dice, añade al inicio de la lista c:
     public void añadirInicio(int n) {
         Nodo nuevo = new Nodo();
         nuevo.num = n;
@@ -12,6 +13,7 @@ public class Listas {
         raiz = nuevo;
     }
 
+    //imprime toda la lista
     public void imprimir() {
         Nodo aux = raiz;
         while (aux != null) {
@@ -21,6 +23,7 @@ public class Listas {
         System.out.println("");
     }
 
+    //imprime el promedio conforme la informacion de la lista
     public void promedio() {
         Nodo aux = raiz;
         double promedio = 0;
@@ -32,6 +35,7 @@ public class Listas {
         System.out.println("promedio: "+promedio / tamaño());
     }
 
+    //imprime el nodo de enmedio de la lista
     public void medio() {
         Nodo aux = raiz;
         int cont = tamaño();
@@ -52,6 +56,7 @@ public class Listas {
         }
     }
 
+    //retorna el tamaño de la lista
     public int tamaño() {
         Nodo aux = raiz;
         int cont = 0;
@@ -63,6 +68,8 @@ public class Listas {
         return cont;
     }
 
+
+    //imprime el valor que mas se repite, mi version
     public void moda() {
         int moda[] = new int[tamaño()], cont = 0;
 
@@ -93,6 +100,7 @@ public class Listas {
 
     }
     
+    //imprime el valor que mas se repite, version del profe...
     public void Moda(){
         Nodo aux = raiz;
         
@@ -112,6 +120,7 @@ public class Listas {
         
     }
 
+    //imprime nodo con respecto a su posicion, x es la posicion
     public String imprimir(int x) {
         Nodo aux = raiz;
 
@@ -125,6 +134,7 @@ public class Listas {
         return "" + aux.sig;
     }
 
+    //imprime los valores pares
     public void par() {
         Nodo aux = raiz;
 
@@ -140,6 +150,7 @@ public class Listas {
         System.out.println("");
     }
     
+    //imprime solo los valores impares
     public void impar(){
         Nodo aux = raiz;
         
@@ -155,6 +166,7 @@ public class Listas {
         System.out.println("");
     }
 
+    //agrega al final de la lista
     public void agregarfin(int num) {
         Nodo x = new Nodo();
         x.num = num;
@@ -170,6 +182,8 @@ public class Listas {
         }
     }
 
+    //Parte a la mitad la lista, y los intercambia. Si la division no
+    // es exacta, el de enmedio se va al final
     public void partiryvoltear(){
         Nodo auxIzq = raiz, auxDer;
     
@@ -223,6 +237,7 @@ public class Listas {
 
     }
 
+    //Inserta nodo con respecto a su posicion
     public void insertarEn(int pos, int num) {
         Nodo aux = raiz, aux2 = raiz.sig;
 
@@ -250,6 +265,7 @@ public class Listas {
 
     }
     
+    //elimina por posicion
     public void eliminarPos(int pos) {
         Nodo aux = raiz, aux2 = raiz.sig;
 
@@ -273,6 +289,7 @@ public class Listas {
 
     }
 
+    //elimina por informacion
     void eliminar(int num) {
         Nodo aux = raiz, aux2 = raiz.sig;
         
@@ -355,9 +372,6 @@ public class Listas {
     void eliminar1si1no() {
         Nodo aux = raiz, aux2 = null;
 
-        int con = 0, tamaño = tamaño();
-        
-        boolean b = true;
         if (raiz == aux) {
             raiz = raiz.sig;
             aux = raiz;
@@ -416,7 +430,6 @@ public class Listas {
     void eliminar1si2no() {
         int con = 1;
         
-        boolean b = true;
         Nodo aux = raiz;
             Nodo aux2 = null;
             raiz = raiz.sig;
@@ -451,7 +464,6 @@ public class Listas {
 
         int tamaño = tamaño(), con;
 
-        int con1 = 0;
         
         while (tamaño != 0) {
             Nodo auxRaiz = raiz;
